@@ -1,0 +1,39 @@
+[default]
+    checkpoint_dir='data/checkpoint'
+    model_dir = 'data/models/model_dir'
+    [default.worldtree_v2]
+        dev='data/worldtree_v2/questions.dev.tsv'
+        test='data/worldtree_v2/questions.test.tsv'
+        train='data/worldtree_v2/questions.train.tsv'
+        lemmatizer_path='data/worldtree_v2/tables/LemmatizerAdditions.tsv'
+        table_store_path='data/worldtree_v2/tables'
+    [default.worldtree_v1]
+        dev='data/worldtree_v1/questions/ARC-Elementary+EXPL-Dev.tsv'
+        test='data/worldtree_v1/questions/ARC-Elementary+EXPL-Test-Masked.tsv'
+        train='data/worldtree_v1/questions/ARC-Elementary+EXPL-Train.tsv'
+        lemmatizer_path='data/worldtree_v2/tables/LemmatizerAdditions.tsv'
+        table_store_path='data/worldtree_v1/annotation/expl-tablestore-export-2017-08-25-230344/tables'
+    [default.worldtree_v1.unification]
+        dev='data/unification/dev_res.json'
+        test='data/unification/test_res.json'
+        train='data/unification/train_res.json'
+        prediction_dev='data/unification/prediction_dev.msgpack'
+        prediction_train='data/unification/prediction_train.msgpack'
+        prediction_test='data/unification/prediction_test.msgpack'
+    [default.generics_kb]
+        best='data/generics_kb/GenericsKB-Best.tsv'
+    [default.arc_dataset]
+        [default.arc_dataset.easy]
+            train='data/ARC-V1-Feb2018-2/ARC-Easy/ARC-Easy-Train.jsonl'
+            dev='data/ARC-V1-Feb2018-2/ARC-Easy/ARC-Easy-Dev.jsonl'
+            test='data/ARC-V1-Feb2018-2/ARC-Easy/ARC-Easy-Test.jsonl'
+        [default.arc_dataset.challenge]
+            train='data/ARC-V1-Feb2018-2/ARC-Challenge/ARC-Challenge-Train.jsonl'
+            dev='data/ARC-V1-Feb2018-2/ARC-Challenge/ARC-Challenge-Dev.jsonl'
+            test='data/ARC-V1-Feb2018-2/ARC-Challenge/ARC-Challenge-Test.jsonl'
+
+[test]
+    generics_kb_test='data/generics_kb/GenericsKB-Test.tsv'
+    [test.worldtree_v2]
+        dev='./data/tests/worldtree_v2/questions.dev.tsv'
+
